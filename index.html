@@ -1,0 +1,3723 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '572408978658915');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=572408978658915&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TargetMax : 30 Activités Éducatives & Ludiques pour Enfants Loin des Écrans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    
+    <style>
+    	/* Gardez le CSS de base du .cta-button avec position: relative, overflow: hidden, z-index: 1 */
+/* ... */
+
+/* NOUVEAU CSS POUR L'EFFET DE PULSATION / HALO */
+.cta-button::after { /* Utilisons ::after pour éviter un conflit si vous voulez garder ::before pour autre chose */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary-orange); /* Ou une couleur plus claire comme rgba(255, 255, 255, 0.4) */
+    border-radius: 50px; /* Ou plus pour un cercle */
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: none; /* Important pour ne pas interférer avec le transition du bouton lui-même */
+    animation: pulse-halo 2.5s infinite ease-out; /* Plus lent et plus doux */
+    z-index: -1; /* Pour que le halo soit DERRIÈRE le texte et la base du bouton */
+}
+
+@keyframes pulse-halo {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1); /* Plus grand */
+        opacity: 0.6; /* Plus visible au milieu */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2); /* Disparaît en s'élargissant */
+        opacity: 0;
+    }
+}
+
+    	/* ========================================= */
+/* --- VARIABLES GLOBALES TARGETMAX --- */
+/* (À placer tout en haut de ton fichier CSS) */
+/* ========================================= */
+:root {
+    /* --- Couleurs Primaires TargetMax --- */
+    --color-primary-orange: #FF8C00;   /* Orange vibrant (pour les CTA, accents majeurs) */
+    --color-primary-blue: #32A8DB;     /* Bleu moyen (pour les titres secondaires, icônes) */
+    --color-heading: #1D3557;          /* Bleu Marine Profond (pour les titres principaux, maintient la force) */
+    --color-text-dark: #333333;        /* Gris très foncé pour le texte courant */
+    --color-text-light: #666666;       /* Gris moyen pour le texte secondaire/introductif */
+
+    /* --- Couleurs de Fond --- */
+    --color-background-white: #FFFFFF; /* Blanc pur pour les éléments en surbrillance (cartes) */
+    --color-background-soft: #FDF9F3;  /* Crème très léger (pour un fond de section doux) */
+    --color-background-primary: #F8F9FA; /* Gris très clair, pour les fonds de sections par défaut */
+
+    /* --- Couleurs d'Accentuation et Statut --- */
+    --color-accent-green: #28A745;     /* Vert pour les succès / coches */
+    --color-accent-red: #DC3545;       /* Rouge pour les erreurs / avertissements (si nécessaire) */
+    --color-border-light: #DDDDDD;     /* Couleur de bordure légère */
+
+    /* --- Ombres --- */
+    --shadow-light: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.15);
+    --shadow-strong: 0 10px 30px rgba(0,0,0,0.2);
+
+    /* --- Typographie --- */
+    --font-family-primary: 'Poppins', sans-serif;
+    --font-family-secondary: 'Roboto', sans-serif; /* Fallback ou pour des éléments spécifiques */
+    --base-font-size: 16px;
+
+    /* --- Espacements --- */
+    --spacing-unit: 8px; /* Unité de base pour les espacements */
+    --padding-section: 80px 0; /* Padding vertical standard pour les sections */
+}
+
+
+/* ========================================= */
+/* --- RESET CSS & STYLES DE BASE --- */
+/* ========================================= */
+*, *::before, *::after {
+    box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur/hauteur */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement doux lors des ancres */
+    font-size: var(--base-font-size); /* Taille de police de base pour la responsivité via em/rem */
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-primary);
+    -webkit-font-smoothing: antialiased; /* Améliore le rendu des polices sur Webkit */
+    -moz-osx-font-smoothing: grayscale; /* Améliore le rendu des polices sur Firefox */
+}
+
+/* Règle essentielle pour les images: les empêche de déborder */
+img {
+    max-width: 100%; /* S'assure que l'image ne dépasse jamais la largeur de son conteneur */
+    height: auto;    /* Maintient le ratio d'aspect de l'image */
+    display: block;  /* Supprime l'espace sous les images (comportement inline par défaut) */
+}
+
+/* Style pour les liens */
+a {
+    text-decoration: none;
+    color: inherit; /* Les liens héritent de la couleur du texte parent par défaut */
+}
+
+/* Style pour les listes */
+ul {
+    list-style: none; /* Supprime les puces par défaut */
+}
+
+
+/* ========================================= */
+/* --- CONTENEUR GLOBAL --- */
+/* ========================================= */
+.container {
+    max-width: 1100px; /* Largeur maximale pour le contenu */
+    margin: 0 auto;    /* Centre le conteneur horizontalement */
+    padding: 0 20px;   /* Padding sur les côtés pour éviter que le contenu ne touche les bords de l'écran */
+}
+
+
+/* ========================================= */
+/* --- STYLES GÉNÉRIQUES DE SECTION --- */
+/* (Appliqués à toutes les balises <section>) */
+/* ========================================= */
+section {
+    padding: var(--padding-section); /* Padding vertical standard (80px haut/bas) */
+    position: relative; /* Utile pour les positionnements absolus à l'intérieur */
+    overflow: hidden;   /* Important pour gérer les animations AOS et éviter les débordements */
+}
+
+/* Styles pour les titres H2 de section (avec la ligne en dessous) */
+section h2 {
+    font-size: 3.2em;
+    color: var(--color-heading);
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 700; /* Assurer une bonne visibilité */
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary-blue);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Style général pour les icônes de section (ampoule, triangle, livre, sablier...) */
+.icon-section {
+    font-size: 4.5em;
+    color: var(--color-primary-orange); /* Couleur par défaut pour les icônes de section */
+    margin-bottom: 25px;
+    display: block;
+    text-align: center;
+}
+
+/* Style général pour les paragraphes d'introduction de section */
+.section-intro {
+    font-size: 1.25em;
+    color: var(--color-text-light);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+}
+
+/* ========================================= */
+/* --- STYLES DES BOUTONS CTA TARGETMAX --- */
+/* ========================================= */
+.cta-button {
+    display: inline-block;
+    padding: 18px 35px;
+    background-color: var(--color-primary-orange); /* Orange vif comme couleur principale des CTA */
+    color: var(--color-background-white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-medium);
+}
+
+.cta-button:hover {
+    background-color: #E07B00; /* Un orange légèrement plus foncé au survol */
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* ========================================= */
+/* --- STYLES DES SECTIONS DÉJÀ REFONDUES --- */
+/* (Ces blocs sont à ajouter/remplacer le cas échéant) */
+/* ========================================= */
+
+/* --- SECTION HERO --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-background-primary) 0%, var(--color-background-soft) 100%);
+    padding: 100px 0;
+    text-align: center;
+}
+.hero-section .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.hero-section h1 {
+    font-size: 4.2em;
+    color: var(--color-heading);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+.hero-section .subtitle {
+    font-size: 1.7em;
+    color: var(--color-primary-blue);
+    font-weight: 600;
+    margin-bottom: 35px;
+    line-height: 1.3;
+}
+.hero-section .intro-paragraph {
+    font-size: 1.15em;
+    color: var(--color-text-dark);
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+}
+.hero-section .cta-subtext {
+    font-size: 1.05em;
+    color: var(--color-text-light);
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+/* --- SECTION PROBLÈME (SCÉNARIOS) --- */
+.problem-section {
+    background-color: var(--color-background-soft);
+}
+.problem-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+.problem-section .intro-problem-text {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    color: var(--color-text-dark);
+}
+.problem-scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.scenario-item {
+    background-color: var(--color-background-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border-light);
+}
+.scenario-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+.scenario-item .scenario-icon {
+    font-size: 3.5em;
+    color: var(--color-primary-orange);
+    margin-bottom: 20px;
+}
+.scenario-item h3 {
+    font-size: 1.6em;
+    color: var(--color-heading);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+.scenario-item p {
+    font-size: 1.05em;
+    color: var(--color-text-light);
+}
+.problem-section .call-to-action-problem {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    margin-top: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* --- SECTION SOLUTION (AVANTAGES) --- */
+.solution-section {
+    background-color: var(--color-background-primary);
+}
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.solution-item {
+    background-color: var(--color-background-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border: 1px solid var(--color-border-light);
+}
+.solution-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+.solution-item h3 {
+    font-size: 1.6em;
+    color: var(--color-heading);
+    margin-bottom: 15px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+}
+.solution-item h3 i {
+    color: var(--color-accent-green);
+    margin-right: 12px;
+    font-size: 1.2em;
+}
+.solution-item p {
+    font-size: 1.05em;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- SECTION CONTENU/THÈMES --- */
+.content-section {
+    background-color: var(--color-background-soft);
+}
+.content-section .icon-section {
+    color: var(--color-primary-blue); /* Ou garder var(--color-primary-orange) si préféré */
+}
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.theme-item {
+    background-color: var(--color-background-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border-light);
+}
+.theme-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+.theme-item .theme-icon {
+    font-size: 3.5em;
+    color: var(--color-primary-orange);
+    margin-bottom: 20px;
+}
+.theme-item h3 {
+    font-size: 1.6em;
+    color: var(--color-heading);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+.theme-item p {
+    font-size: 1.05em;
+    color: var(--color-text-light);
+}
+
+/* --- SECTION HISTOIRE D'AÏSHA --- */
+.aisha-story-section {
+    background-color: var(--color-background-primary);
+    padding: var(--padding-section);
+    text-align: center;
+}
+.aisha-story-section .icon-section {
+    color: var(--color-primary-blue);
+}
+.aisha-story-section h2 {
+    font-size: 2.8em;
+    color: var(--color-heading);
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+.aisha-story-section .aisha-story-block {
+    background-color: var(--color-background-white);
+    border-left: 5px solid var(--color-primary-blue);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+    border: 1px solid var(--color-border-light);
+}
+.aisha-story-section .aisha-story-block p {
+    font-size: 1.15em;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.aisha-story-section .aisha-story-block p:last-child {
+    margin-bottom: 0;
+}
+.aisha-story-section .story-lesson-text {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--color-primary-blue);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.aisha-story-section p[style*="font-size: 14px"] { /* Style pour le disclaimer */
+    font-size: 0.85em !important;
+    color: var(--color-text-light);
+    margin-top: 15px;
+}
+
+
+/* ========================================= */
+/* --- MEDIA QUERIES (RESPONSIVE DESIGN) --- */
+/* ========================================= */
+
+@media (max-width: 992px) {
+    /* Ajustements généraux */
+    section {
+        padding: 60px 0;
+    }
+    section h2 {
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    section h2::after {
+        width: 60px;
+        height: 3px;
+    }
+    .icon-section {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+    .section-intro {
+        font-size: 1.15em;
+        margin-bottom: 40px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 80px 0;
+    }
+    .hero-section h1 {
+        font-size: 3.5em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.5em;
+    }
+    .hero-section .intro-paragraph {
+        font-size: 1.05em;
+        margin-bottom: 40px;
+    }
+    .cta-button {
+        padding: 16px 30px;
+        font-size: 1.15em;
+    }
+    .hero-section .cta-subtext {
+        font-size: 1em;
+    }
+
+    /* Problem Section */
+    .problem-section h2 {
+        font-size: 2.5em;
+    }
+    .problem-section .intro-problem-text {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+    }
+    .problem-scenarios-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    .scenario-item {
+        padding: 25px;
+    }
+    .scenario-item .scenario-icon {
+        font-size: 3em;
+    }
+    .scenario-item h3 {
+        font-size: 1.4em;
+    }
+    .problem-section .call-to-action-problem {
+        font-size: 1.2em;
+        margin-top: 40px;
+    }
+
+    /* Solution Section */
+    .solution-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .solution-item {
+        padding: 25px;
+    }
+    .solution-item h3 {
+        font-size: 1.4em;
+    }
+    .solution-item h3 i {
+        font-size: 1.1em;
+    }
+    .solution-item p {
+        font-size: 1em;
+    }
+
+    /* Content/Themes Section */
+    .themes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    .theme-item {
+        padding: 25px;
+    }
+    .theme-item .theme-icon {
+        font-size: 3em;
+    }
+    .theme-item h3 {
+        font-size: 1.4em;
+    }
+
+    /* Aisha Story Section */
+    .aisha-story-section h2 {
+        font-size: 2.5em;
+    }
+    .aisha-story-section .aisha-story-block {
+        padding: 30px;
+    }
+    .aisha-story-section .aisha-story-block p {
+        font-size: 1.1em;
+    }
+    .aisha-story-section .story-lesson-text {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustements généraux */
+    section {
+        padding: 40px 0;
+    }
+    section h2 {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    section h2::after {
+        width: 50px;
+        height: 2px;
+    }
+    .icon-section {
+        font-size: 3.5em;
+        margin-bottom: 15px;
+    }
+    .section-intro {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2.8em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.3em;
+    }
+    .hero-section .intro-paragraph {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .cta-button {
+        padding: 14px 25px;
+        font-size: 1em;
+    }
+    .hero-section .cta-subtext {
+        font-size: 0.95em;
+    }
+
+    /* Problem Section */
+    .problem-section h2 {
+        font-size: 2.2em;
+    }
+    .problem-section .intro-problem-text {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    .problem-scenarios-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .scenario-item {
+        padding: 20px;
+    }
+    .scenario-item .scenario-icon {
+        font-size: 2.5em;
+    }
+    .scenario-item h3 {
+        font-size: 1.2em;
+    }
+    .problem-section .call-to-action-problem {
+        font-size: 1.1em;
+        margin-top: 30px;
+    }
+
+    /* Solution Section */
+    .solution-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 20px;
+    }
+    .solution-item {
+        padding: 20px;
+    }
+    .solution-item h3 {
+        font-size: 1.2em;
+    }
+    .solution-item h3 i {
+        font-size: 1em;
+    }
+    .solution-item p {
+        font-size: 0.95em;
+    }
+
+    /* Content/Themes Section */
+    .themes-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .theme-item {
+        padding: 20px;
+    }
+    .theme-item .theme-icon {
+        font-size: 2.5em;
+    }
+    .theme-item h3 {
+        font-size: 1.2em;
+    }
+
+    /* Aisha Story Section */
+    .aisha-story-section h2 {
+        font-size: 2.em;
+    }
+    .aisha-story-section .aisha-story-block {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    .aisha-story-section .aisha-story-block p {
+        font-size: 0.95em;
+    }
+    .aisha-story-section .story-lesson-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.1em;
+    }
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+    .problem-section h2 {
+        font-size: 1.8em;
+    }
+    .solution-section h2 {
+        font-size: 1.8em;
+    }
+    .content-section h2 {
+        font-size: 1.8em;
+    }
+    .aisha-story-section h2 {
+        font-size: 1.8em;
+    }
+    .scenario-item .scenario-icon,
+    .theme-item .theme-icon {
+        font-size: 2em;
+    }
+    .scenario-item h3,
+    .theme-item h3 {
+        font-size: 1.1em;
+    }
+}
+/* ========================================= */
+/* --- STYLES DU HEADER (Logo, etc.) --- */
+/* ========================================= */
+.main-header {
+    padding: 20px 0;
+    background-color: var(--color-background-white); /* Fond blanc pour le header */
+    border-bottom: 1px solid var(--color-border-light); /* Bordure légère en bas */
+    box-shadow: var(--shadow-light); /* Petite ombre pour le relief */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: center; /* Centre le logo */
+    align-items: center;
+}
+
+.main-header .logo img {
+    max-height: 50px; /* Taille maximale du logo, ajuste si besoin */
+    width: auto;
+}
+
+/* ========================================= */
+/* --- SECTION D'APERÇU INITIAL (Mockup) --- */
+/* (Ceci est distinct de la hero-section principale, ou peut être fusionné si tu le souhaites) */
+/* ========================================= */
+.initial-preview-section {
+    background-color: var(--color-background-primary); /* Fond gris très clair */
+    padding: 50px 0; /* Padding plus petit que la hero-section */
+    text-align: center;
+}
+
+.initial-preview-section .preview-content {
+    /* Si tu as du texte ici, comme un petit slogan avant le mockup */
+    margin-bottom: 30px;
+}
+
+.initial-preview-section .product-mockup {
+    max-width: 400px; /* Taille maximale pour le mockup (ajuste selon ton image) */
+    height: auto;
+    margin: 0 auto; /* Centre l'image du mockup */
+    display: block; /* S'assure qu'elle se comporte comme un bloc */
+    box-shadow: var(--shadow-medium); /* Ajoute une ombre pour le faire ressortir */
+    border-radius: 10px; /* Coins légèrement arrondis */
+}
+
+/* --- MEDIA QUERIES pour le Header et le Mockup --- */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 0;
+    }
+    .main-header .logo img {
+        max-height: 40px;
+    }
+    .initial-preview-section {
+        padding: 30px 0;
+    }
+    .initial-preview-section .product-mockup {
+        max-width: 300px; /* Réduire la taille du mockup sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 10px 0;
+    }
+    .main-header .logo img {
+        max-height: 35px;
+    }
+    .initial-preview-section {
+        padding: 20px 0;
+    }
+    .initial-preview-section .product-mockup {
+        max-width: 250px;
+    }
+}
+/* ========================================= */
+/* --- UTILITAIRES DE CENTRAGE --- */
+/* ========================================= */
+.text-center {
+    text-align: center !important; /* Force le centrage du texte et des éléments inline/inline-block */
+}
+/* ========================================= */
+/* --- SECTION TÉMOIGNAGES (Refonte TargetMax) --- */
+/* ========================================= */
+.testimonials-section {
+    background-color: var(--color-background-soft); /* Fond légèrement crème pour contraster avec les sections précédentes */
+    padding: var(--padding-section);
+}
+
+.testimonials-section .icon-section {
+    color: var(--color-primary-blue); /* L'icône de la section en bleu TargetMax */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Deux colonnes sur desktop, une sur mobile */
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.testimonial {
+    background-color: var(--color-background-white); /* Fond blanc pour chaque témoignage */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    position: relative;
+    text-align: left; /* Alignement du texte à gauche pour la lisibilité */
+    border: 1px solid var(--color-border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+
+.testimonial .fa-quote-left {
+    font-size: 2.5em; /* Grande icône de citation */
+    color: var(--color-primary-orange); /* Couleur orange pour la citation */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0.2; /* Légèrement transparente pour ne pas gêner le texte */
+}
+
+.testimonial p {
+    font-size: 1.05em;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding-left: 50px; /* Espace pour l'icône de citation */
+    position: relative; /* Pour que le padding-left affecte le texte par rapport à l'icône */
+}
+
+.testimonial p strong {
+    font-weight: 700; /* Assurer que strong soit bien gras */
+    color: var(--color-heading); /* Couleur plus foncée pour le texte important */
+}
+
+.testimonial .author {
+    font-size: 1em;
+    color: var(--color-text-light); /* Gris plus clair pour l'auteur */
+    font-style: italic;
+    text-align: right; /* Aligne l'auteur à droite */
+    margin-top: 15px; /* Espace au-dessus du nom de l'auteur */
+}
+
+/* --- MEDIA QUERIES pour la section Témoignages --- */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Deux colonnes sur tablette */
+        gap: 25px;
+    }
+    .testimonial {
+        padding: 25px;
+    }
+    .testimonial .fa-quote-left {
+        font-size: 2.2em;
+        top: 15px;
+        left: 15px;
+    }
+    .testimonial p {
+        font-size: 1em;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 20px;
+    }
+    .testimonial {
+        padding: 20px;
+    }
+    .testimonial .fa-quote-left {
+        font-size: 2em;
+        top: 10px;
+        left: 10px;
+    }
+    .testimonial p {
+        font-size: 0.95em;
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial .fa-quote-left {
+        font-size: 1.8em;
+    }
+    .testimonial p {
+        font-size: 0.9em;
+        padding-left: 30px;
+    }
+    .testimonial .author {
+        font-size: 0.9em;
+    }
+}
+
+/* ========================================= */
+/* --- SECTION PACK COMPLET (TargetMax) --- */
+/* ========================================= */
+.pack-complete-section {
+    background-color: var(--color-background-primary); /* Fond gris clair */
+    padding: var(--padding-section);
+}
+
+.pack-complete-section .icon-section {
+    color: var(--color-primary-orange); /* Icône de la section en orange */
+}
+
+.pack-content-grid {
+    display: flex; /* Utilisation de flexbox pour l'agencement principal */
+    flex-direction: column; /* Par défaut, les éléments s'empilent */
+    align-items: center; /* Centre les éléments dans la colonne */
+    gap: 60px; /* Espace entre le guide principal et la section bonus */
+    margin-top: 50px;
+}
+
+.main-guide-block {
+    display: flex;
+    flex-direction: column; /* Empile image et description par défaut */
+    align-items: center;
+    gap: 40px;
+    background-color: var(--color-background-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-strong); /* Ombre plus forte pour le produit principal */
+    max-width: 900px; /* Limite la largeur du bloc du guide */
+    border: 1px solid var(--color-border-light);
+}
+
+.main-guide-block .guide-image img {
+    max-width: 350px; /* Taille de l'image du mockup du guide */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+}
+
+.main-guide-block .guide-description h3 {
+    font-size: 2em;
+    color: var(--color-heading);
+    margin-bottom: 25px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre l'icône et le texte */
+    text-align: center;
+}
+
+.main-guide-block .guide-description h3 i {
+    color: var(--color-primary-blue);
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.main-guide-block .guide-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-guide-block .guide-description ul li {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start; /* Aligner le texte avec le haut de l'icône */
+}
+
+.main-guide-block .guide-description ul li i {
+    color: var(--color-accent-green); /* Coche verte */
+    margin-right: 12px;
+    font-size: 1.1em;
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    margin-top: 3px; /* Petit ajustement vertical */
+}
+
+.bonus-section {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.bonus-section h3 {
+    font-size: 2em;
+    color: var(--color-primary-blue);
+    margin-bottom: 40px;
+    line-height: 1.3;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bonus-section h3 i {
+    color: var(--color-primary-orange);
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.bonus-item {
+    background-color: var(--color-background-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border-light);
+}
+
+.bonus-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.bonus-item .bonus-icon {
+    font-size: 3em;
+    color: var(--color-primary-orange);
+    margin-bottom: 20px;
+}
+
+.bonus-item h4 {
+    font-size: 1.5em;
+    color: var(--color-heading);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.bonus-item p {
+    font-size: 1em;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- Style spécifique pour le bouton CTA principal de cette section --- */
+.cta-button.main-cta {
+    background-color: var(--color-primary-blue); /* Couleur principale forte (bleu) */
+    color: var(--color-background-white);
+    padding: 20px 40px; /* Plus grand */
+    font-size: 1.3em;
+    border-bottom: 5px solid #2980B9; /* Bordure plus foncée pour un effet "profondeur" */
+}
+
+.cta-button.main-cta:hover {
+    background-color: #2980B9; /* Bleu légèrement plus foncé au survol */
+    transform: translateY(-3px);
+    border-bottom: 5px solid #205F8C; /* Bordure s'assombrit aussi */
+}
+
+
+/* ========================================= */
+/* --- SECTION PACK COMPLET (TargetMax) - CORRIGÉE POUR L'AGENCEMENT --- */
+/* ========================================= */
+.pack-complete-section {
+    background-color: var(--color-background-primary);
+    padding: var(--padding-section);
+}
+
+.pack-complete-section .icon-section {
+    color: var(--color-primary-orange);
+}
+
+.pack-content-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.main-guide-block {
+    display: flex;
+    flex-direction: column; /* Par défaut, empile sur mobile */
+    align-items: center;
+    gap: 40px;
+    background-color: var(--color-background-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-strong);
+    max-width: 900px;
+    width: 100%; /* S'assure de prendre toute la largeur disponible dans le conteneur */
+    box-sizing: border-box;
+    border: 1px solid var(--color-border-light);
+}
+
+.main-guide-block .guide-image {
+    flex-shrink: 0; /* Empêche la réduction de l'image */
+    width: 100%; /* Prend toute la largeur disponible pour l'image sur mobile */
+    max-width: 350px; /* Limite la largeur de l'image sur mobile/petits écrans */
+    margin-bottom: 20px; /* Espace sous l'image sur mobile */
+}
+
+.main-guide-block .guide-image img {
+    width: 100%; /* L'image remplit son conteneur */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+}
+
+.main-guide-block .guide-description {
+    flex-grow: 1;
+    width: 100%; /* S'assure de prendre toute la largeur disponible pour la description sur mobile */
+    text-align: center; /* Centrer le texte sur mobile */
+}
+
+.main-guide-block .guide-description h3 {
+    font-size: 2em;
+    color: var(--color-heading);
+    margin-bottom: 25px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer l'icône et le texte sur mobile */
+    text-align: center;
+}
+
+.main-guide-block .guide-description h3 i {
+    color: var(--color-primary-blue);
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.main-guide-block .guide-description ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Aligner les listes à gauche */
+    max-width: 500px; /* Limiter la largeur des listes pour la lisibilité */
+    margin: 0 auto; /* Centrer la liste elle-même */
+}
+
+.main-guide-block .guide-description ul li {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+}
+
+.main-guide-block .guide-description ul li i {
+    color: var(--color-accent-green);
+    margin-right: 12px;
+    font-size: 1.1em;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* Le reste des sections bonus, boutons, etc. */
+.bonus-section {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.bonus-section h3 {
+    font-size: 2em;
+    color: var(--color-primary-blue);
+    margin-bottom: 40px;
+    line-height: 1.3;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bonus-section h3 i {
+    color: var(--color-primary-orange);
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+.bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.bonus-item {
+    background-color: var(--color-background-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border-light);
+}
+
+.bonus-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.bonus-item .bonus-icon {
+    font-size: 3em;
+    color: var(--color-primary-orange);
+    margin-bottom: 20px;
+}
+
+.bonus-item h4 {
+    font-size: 1.5em;
+    color: var(--color-heading);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.bonus-item p {
+    font-size: 1em;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- Style spécifique pour le bouton CTA principal de cette section --- */
+.cta-button.main-cta {
+    background-color: var(--color-primary-blue);
+    color: var(--color-background-white);
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 1.3em;
+    box-shadow: inset 0 -5px 0 rgba(0,0,0,0.2), var(--shadow-medium);
+    border: none;
+}
+
+.cta-button.main-cta:hover {
+    background-color: #2980B9;
+    transform: translateY(-3px);
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2), var(--shadow-strong);
+}
+
+/* --- MEDIA QUERIES pour la section Pack Complet --- */
+@media (min-width: 769px) { /* Pour aligner l'image à gauche et le texte à droite sur desktop */
+    .main-guide-block {
+        flex-direction: row; /* Alignement horizontal sur les écrans plus larges */
+        text-align: left; /* Réaligner le texte à gauche */
+        justify-content: center; /* Centre le contenu horizontalement */
+        align-items: center; /* Aligner les éléments verticalement au centre */
+        padding: 50px; /* Augmenter le padding sur desktop */
+    }
+    .main-guide-block .guide-image {
+        flex-basis: 35%; /* L'image prend 35% de l'espace sur desktop */
+        max-width: 35%; /* S'assurer que l'image ne dépasse pas cette largeur */
+        margin-right: 50px; /* Espacement plus grand entre image et texte */
+        margin-bottom: 0; /* Pas de marge en bas sur desktop */
+    }
+    .main-guide-block .guide-description {
+        flex-basis: 65%; /* La description prend 65% de l'espace sur desktop */
+        flex-grow: 0; /* Ne pas prendre l'espace restant pour éviter de trop s'étirer */
+        text-align: left; /* Aligner le texte à gauche sur desktop */
+    }
+    .main-guide-block .guide-description h3 {
+        justify-content: flex-start; /* Aligner l'icône et le texte du titre à gauche */
+        text-align: left;
+    }
+    .main-guide-block .guide-description ul {
+        margin: 0; /* Supprimer la marge auto sur desktop */
+    }
+    .main-guide-block .guide-description ul li {
+        justify-content: flex-start; /* Aligner les éléments de liste à gauche */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Ajustements généraux pour tablettes */
+    .main-guide-block {
+        padding: 30px;
+        gap: 30px;
+    }
+    .main-guide-block .guide-image {
+        max-width: 300px;
+    }
+    .main-guide-block .guide-description h3 {
+        font-size: 1.8em;
+    }
+    .main-guide-block .guide-description ul li {
+        font-size: 1.05em;
+    }
+    .bonus-section h3 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .bonus-grid {
+        gap: 25px;
+    }
+    .bonus-item {
+        padding: 25px;
+    }
+    .bonus-item h4 {
+        font-size: 1.3em;
+    }
+    .bonus-item .bonus-icon {
+        font-size: 2.5em;
+    }
+    .cta-button.main-cta {
+        padding: 18px 35px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustements généraux pour mobile */
+    .pack-complete-section {
+        padding: 40px 0;
+    }
+    .pack-content-grid {
+        gap: 40px;
+        margin-top: 30px;
+    }
+    .main-guide-block {
+        flex-direction: column; /* Force la colonne sur mobile */
+        text-align: center;
+        padding: 25px;
+        gap: 25px;
+    }
+    .main-guide-block .guide-image {
+        max-width: 250px;
+        margin-bottom: 20px;
+        margin-right: 0; /* Assure pas de marge droite sur mobile */
+    }
+    .main-guide-block .guide-description {
+        width: 100%;
+        text-align: center;
+    }
+    .main-guide-block .guide-description h3 {
+        font-size: 1.6em;
+        justify-content: center;
+    }
+    .main-guide-block .guide-description ul {
+        text-align: left; /* Maintenir les listes alignées à gauche */
+        padding-left: 0;
+        margin: 0 auto; /* Centrer la liste si elle est plus petite que le bloc */
+    }
+    .main-guide-block .guide-description ul li {
+        justify-content: flex-start; /* Aligner les items de liste à gauche */
+        text-align: left;
+    }
+    .main-guide-block .guide-description ul li i {
+        margin-right: 10px;
+        margin-top: 0;
+    }
+    .bonus-section h3 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+    .bonus-item h4 {
+        font-size: 1.3em;
+    }
+    .bonus-item .bonus-icon {
+        font-size: 2.2em;
+    }
+    .cta-button.main-cta {
+        padding: 16px 30px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-guide-block .guide-description h3 {
+        font-size: 1.4em;
+    }
+    .main-guide-block .guide-description ul li {
+        font-size: 0.95em;
+    }
+    .bonus-section h3 {
+        font-size: 1.4em;
+    }
+    .bonus-item h4 {
+        font-size: 1.1em;
+    }
+    .bonus-item .bonus-icon {
+        font-size: 2em;
+    }
+    .cta-button.main-cta {
+        padding: 14px 25px;
+        font-size: 1em;
+    }
+}/* ========================================= */
+/* --- SECTION PRIX (TargetMax) --- */
+/* ========================================= */
+.pricing-section {
+    background-color: var(--color-background-white); /* Fond blanc pour bien faire ressortir la carte */
+    padding: var(--padding-section);
+}
+
+.pricing-section .icon-section {
+    color: var(--color-primary-orange); /* Icône de la section en orange */
+}
+
+.pricing-card {
+    background-color: var(--color-background-primary); /* Fond gris clair pour la carte */
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong); /* Ombre forte pour la mettre en valeur */
+    max-width: 550px; /* Largeur max de la carte de prix */
+    margin: 50px auto 0 auto; /* Centrer la carte */
+    border: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espace entre les blocs internes */
+}
+
+.pricing-header h3 {
+    font-size: 2.5em;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.pricing-header .value-proposition {
+    font-size: 1.1em;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.pricing-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-price .old-price {
+    font-size: 1.3em;
+    color: var(--color-text-light);
+    text-decoration: line-through; /* Barrer l'ancien prix */
+    font-weight: 500;
+}
+
+.pricing-price .current-price {
+    font-size: 3.5em; /* Grande taille pour le prix actuel */
+    color: var(--color-primary-blue); /* Bleu profond pour le prix */
+    font-weight: 900;
+    line-height: 1; /* Supprime l'espace entre le texte et le prix */
+}
+
+.pricing-price .price-value {
+    color: var(--color-primary-orange); /* Met la valeur numérique en orange */
+    font-size: 1.2em; /* Rend la valeur légèrement plus grande */
+    display: inline-block; /* Pour que la couleur s'applique bien */
+}
+
+.pricing-price .price-details {
+    font-size: 1em;
+    color: var(--color-text-light);
+    margin-top: 10px;
+}
+
+.pricing-features ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Aligner les features à gauche */
+    width: 100%; /* Permet aux listes de prendre la largeur disponible */
+    max-width: 350px; /* Limiter la largeur des listes pour la lisibilité */
+}
+
+.pricing-features ul li {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+}
+
+.pricing-features ul li i {
+    color: var(--color-accent-green); /* Coche verte */
+    margin-right: 12px;
+    font-size: 1.1em;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.pricing-cta {
+    width: 100%; /* S'assure que le CTA prend toute la largeur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pricing-cta .cta-button.main-cta {
+    padding: 22px 45px; /* Plus grand pour le CTA principal */
+    font-size: 1.4em;
+    background-color: var(--color-primary-orange); /* Couleur principale pour le CTA final */
+    box-shadow: inset 0 -6px 0 rgba(0,0,0,0.2), var(--shadow-medium);
+    border-bottom: none; /* Remplacé par l'ombre interne */
+}
+
+.pricing-cta .cta-button.main-cta:hover {
+    background-color: #E69138; /* Orange légèrement plus foncé */
+    transform: translateY(-4px);
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,0.2), var(--shadow-strong);
+}
+
+.pricing-cta .payment-methods {
+    font-size: 0.95em;
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.pricing-cta .payment-methods i {
+    color: var(--color-accent-green); /* Icône de sécurité en vert */
+}
+
+.guarantee-teaser {
+    font-size: 1.1em;
+    color: var(--color-primary-blue); /* Texte d'accroche pour la garantie */
+    font-weight: 600;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.guarantee-teaser i {
+    color: var(--color-primary-orange); /* Icône de bouclier en orange */
+    font-size: 1.2em;
+}
+
+/* --- Animation de pulsation pour le CTA principal --- */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 167, 38, 0.7);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 20px rgba(255, 167, 38, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 167, 38, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+
+/* --- MEDIA QUERIES pour la section Prix --- */
+@media (max-width: 992px) {
+    .pricing-card {
+        padding: 40px 25px;
+        gap: 25px;
+    }
+    .pricing-header h3 {
+        font-size: 2.2em;
+    }
+    .pricing-price .old-price {
+        font-size: 1.2em;
+    }
+    .pricing-price .current-price {
+        font-size: 3em;
+    }
+    .pricing-features ul li {
+        font-size: 1em;
+    }
+    .pricing-cta .cta-button.main-cta {
+        padding: 20px 40px;
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 0;
+    }
+    .pricing-card {
+        padding: 30px 20px;
+        margin-top: 30px;
+        gap: 20px;
+    }
+    .pricing-header h3 {
+        font-size: 2em;
+    }
+    .pricing-header .value-proposition {
+        font-size: 1em;
+    }
+    .pricing-price .old-price {
+        font-size: 1.1em;
+    }
+    .pricing-price .current-price {
+        font-size: 2.5em;
+    }
+    .pricing-price .price-value {
+        font-size: 1.1em;
+    }
+    .pricing-features ul {
+        max-width: none; /* Prend toute la largeur sur mobile */
+        text-align: center; /* Centre les listes si besoin */
+    }
+    .pricing-features ul li {
+        font-size: 0.95em;
+        justify-content: center; /* Centre les items de liste */
+        text-align: left; /* Mais le texte reste aligné à gauche */
+    }
+    .pricing-cta .cta-button.main-cta {
+        padding: 18px 35px;
+        font-size: 1.2em;
+    }
+    .guarantee-teaser {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-card {
+        padding: 25px 15px;
+    }
+    .pricing-header h3 {
+        font-size: 1.8em;
+    }
+    .pricing-price .current-price {
+        font-size: 2em;
+    }
+    .pricing-price .price-value {
+        font-size: 1em;
+    }
+    .pricing-features ul li {
+        font-size: 0.9em;
+    }
+    .pricing-cta .cta-button.main-cta {
+        padding: 16px 30px;
+        font-size: 1.1em;
+    }
+}
+/* ========================================= */
+/* --- SECTION FAQ --- */
+/* ========================================= */
+.faq-section {
+    background-color: var(--color-background-white); /* Fond blanc */
+    padding: var(--padding-section);
+}
+
+.faq-section .icon-section {
+    color: var(--color-primary-blue); /* Icône de la section en bleu */
+}
+
+.faq-accordion-container {
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    text-align: left; /* Aligner le texte des questions à gauche */
+}
+
+.faq-item {
+    background-color: var(--color-background-primary); /* Fond gris clair pour chaque item */
+    border: 1px solid var(--color-border-light);
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espace entre les items FAQ */
+    box-shadow: var(--shadow-light);
+    overflow: hidden; /* Important pour l'animation de déploiement */
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+/* Cache la checkbox par défaut */
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--color-heading);
+    background-color: var(--color-background-white); /* Fond blanc pour l'entête */
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border-light); /* Séparateur */
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--color-background-soft); /* Léger changement au survol */
+}
+
+.accordion-icon {
+    font-size: 0.9em;
+    color: var(--color-primary-orange);
+    transition: transform 0.3s ease;
+}
+
+/* Fait pivoter l'icône quand la checkbox est cochée */
+.accordion-toggle:checked + .accordion-header .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0; /* Cache le contenu par défaut */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Animation pour le déploiement */
+    padding: 0 30px; /* Padding latéral, vertical sera ajouté au déploiement */
+}
+
+.accordion-toggle:checked + .accordion-header + .accordion-content {
+    max-height: 200px; /* Hauteur maximale pour le contenu (ajuster si besoin) */
+    padding: 20px 30px; /* Padding vertical quand déployé */
+}
+
+.accordion-content p {
+    font-size: 1.05em;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+}
+
+.accordion-content p strong {
+    color: var(--color-primary-blue);
+    font-weight: 700;
+}
+
+/* --- MEDIA QUERIES pour la section FAQ --- */
+@media (max-width: 992px) {
+    .faq-accordion-container {
+        margin-top: 40px;
+    }
+    .accordion-header {
+        font-size: 1.15em;
+        padding: 18px 25px;
+    }
+    .accordion-content {
+        padding: 0 25px;
+    }
+    .accordion-toggle:checked + .accordion-header + .accordion-content {
+        padding: 15px 25px;
+    }
+    .accordion-content p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 0;
+    }
+    .faq-accordion-container {
+        margin-top: 30px;
+    }
+    .faq-item {
+        margin-bottom: 15px;
+    }
+    .accordion-header {
+        font-size: 1.05em;
+        padding: 15px 20px;
+    }
+    .accordion-icon {
+        font-size: 0.8em;
+    }
+    .accordion-content {
+        padding: 0 20px;
+    }
+    .accordion-toggle:checked + .accordion-header + .accordion-content {
+        padding: 15px 20px;
+    }
+    .accordion-content p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-header {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+    .accordion-content {
+        padding: 0 15px;
+    }
+    .accordion-toggle:checked + .accordion-header + .accordion-content {
+        padding: 12px 15px;
+    }
+    .accordion-content p {
+        font-size: 0.9em;
+    }
+}
+/* ========================================= */
+/* --- SECTION PRIX --- */
+/* ========================================= */
+.pricing-section {
+    background-color: var(--color-background-soft); /* Fond doux pour la section prix */
+    padding: var(--padding-section);
+}
+
+.pricing-section .icon-section {
+    color: var(--color-primary-orange); /* Icône de la section en orange */
+}
+
+.pricing-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    background-color: var(--color-background-white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-strong); /* Ombre forte pour le prix */
+    padding: 40px;
+    max-width: 500px; /* Largeur max de la carte de prix */
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color-border-light);
+    transform: translateY(-10px); /* Pour la faire ressortir un peu plus */
+}
+
+.pricing-card .card-header {
+    margin-bottom: 30px;
+}
+
+.pricing-card .card-header h3 {
+    font-size: 2.2em;
+    color: var(--color-primary-blue);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.pricing-card .card-header .subtitle-card {
+    font-size: 1.1em;
+    color: var(--color-text-light);
+}
+
+.pricing-card .card-body {
+    margin-bottom: 30px;
+}
+
+.pricing-card .price-display {
+    margin-bottom: 30px;
+}
+
+.pricing-card .old-price {
+    display: block;
+    font-size: 1.3em;
+    color: var(--color-text-light);
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.pricing-card .current-price {
+    display: block;
+    font-size: 1.8em;
+    color: var(--color-heading);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price-value {
+    font-size: 3.5em; /* Taille énorme pour le prix */
+    font-weight: 900;
+    color: var(--color-primary-orange); /* Orange éclatant pour le prix */
+    display: inline-block; /* Pour appliquer des transformations si besoin */
+    line-height: 1; /* Empêche l'interligne de pousser le texte */
+}
+
+.pricing-card .savings {
+    font-size: 1.1em;
+    color: var(--color-accent-green); /* Vert pour les économies */
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.pricing-card .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left; /* Aligne les features à gauche */
+}
+
+.pricing-card .features-list li {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.pricing-card .features-list li i {
+    color: var(--color-accent-green); /* Coche verte */
+    font-size: 1.1em;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.pricing-card .cta-button.main-cta {
+    /* Utilise les styles déjà définis pour main-cta, juste pour s'assurer qu'il est appliqué */
+    width: 100%; /* S'assure que le bouton prend toute la largeur */
+    padding: 20px 25px; /* Ajuster un peu le padding pour la largeur */
+}
+
+.pricing-card .card-footer {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--color-border-light); /* Ligne pointillée */
+}
+
+.pricing-card .card-footer p {
+    font-size: 0.95em;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.pricing-card .payment-badges {
+    max-width: 250px; /* Largeur max des badges de paiement */
+    height: auto;
+    display: block; /* Pour centrer l'image */
+    margin: 0 auto; /* Centrer l'image */
+    filter: grayscale(10%); /* Léger désaturation pour un look pro */
+}
+
+.limited-offer-text {
+    font-size: 1.15em;
+    color: var(--color-text-dark);
+    margin-top: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.limited-offer-text i {
+    color: var(--color-primary-orange);
+    font-size: 1.2em;
+}
+
+
+/* --- MEDIA QUERIES pour la section Prix --- */
+@media (max-width: 992px) {
+    .pricing-card {
+        padding: 35px;
+        max-width: 450px;
+    }
+    .pricing-card .card-header h3 {
+        font-size: 2em;
+    }
+    .pricing-card .price-value {
+        font-size: 3em;
+    }
+    .pricing-card .features-list li {
+        font-size: 1.05em;
+    }
+    .pricing-card .cta-button.main-cta {
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 0;
+    }
+    .pricing-card {
+        padding: 30px;
+        max-width: 350px; /* Réduire un peu plus sur mobile */
+    }
+    .pricing-card .card-header h3 {
+        font-size: 1.8em;
+    }
+    .pricing-card .price-value {
+        font-size: 2.8em;
+    }
+    .pricing-card .features-list li {
+        font-size: 1em;
+    }
+    .pricing-card .cta-button.main-cta {
+        font-size: 1.1em;
+        padding: 16px 18px;
+    }
+    .limited-offer-text {
+        font-size: 1em;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-card {
+        padding: 25px;
+    }
+    .pricing-card .card-header h3 {
+        font-size: 1.6em;
+    }
+    .pricing-card .price-value {
+        font-size: 2.5em;
+    }
+    .pricing-card .features-list li {
+        font-size: 0.95em;
+    }
+    .pricing-card .cta-button.main-cta {
+        font-size: 1em;
+        padding: 14px 15px;
+    }
+    .limited-offer-text {
+        font-size: 0.9em;
+    }
+}
+/* ========================================= */
+/* --- SECTION PRIX --- */
+/* ========================================= */
+.pricing-section {
+    background-color: var(--color-background-soft); /* Fond doux pour la section prix */
+    padding: var(--padding-section);
+}
+
+.pricing-section .icon-section {
+    color: var(--color-primary-orange); /* Icône de la section en orange */
+}
+
+.pricing-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    background-color: var(--color-background-white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-strong); /* Ombre forte pour le prix */
+    padding: 40px;
+    max-width: 500px; /* Largeur max de la carte de prix */
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color-border-light);
+    transform: translateY(-10px); /* Pour la faire ressortir un peu plus */
+}
+
+.pricing-card .card-header {
+    margin-bottom: 30px;
+}
+
+.pricing-card .card-header h3 {
+    font-size: 2.2em;
+    color: var(--color-primary-blue);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.pricing-card .card-header .subtitle-card {
+    font-size: 1.1em;
+    color: var(--color-text-light);
+}
+
+.pricing-card .card-body {
+    margin-bottom: 30px;
+}
+
+.pricing-card .price-display {
+    margin-bottom: 30px;
+}
+
+.pricing-card .old-price {
+    display: block;
+    font-size: 1.3em;
+    color: var(--color-text-light);
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.pricing-card .current-price {
+    display: block;
+    font-size: 1.8em;
+    color: var(--color-heading);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price-value {
+    font-size: 3.5em; /* Taille énorme pour le prix */
+    font-weight: 900;
+    color: var(--color-primary-orange); /* Orange éclatant pour le prix */
+    display: inline-block; /* Pour appliquer des transformations si besoin */
+    line-height: 1; /* Empêche l'interligne de pousser le texte */
+}
+
+.pricing-card .savings {
+    font-size: 1.1em;
+    color: var(--color-accent-green); /* Vert pour les économies */
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.pricing-card .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left; /* Aligne les features à gauche */
+}
+
+.pricing-card .features-list li {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.pricing-card .features-list li i {
+    color: var(--color-accent-green); /* Coche verte */
+    font-size: 1.1em;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.pricing-card .cta-button.main-cta {
+    width: 100%; /* S'assure que le bouton prend toute la largeur */
+    padding: 20px 25px; /* Ajuster un peu le padding pour la largeur */
+}
+
+.pricing-card .card-footer {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--color-border-light); /* Ligne pointillée */
+}
+
+.pricing-card .card-footer p {
+    font-size: 0.95em;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+/* Nouveaux styles pour les informations de paiement */
+.pricing-card .payment-security {
+    font-size: 1em;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    display: flex; /* Pour aligner icône et texte */
+    align-items: center;
+    justify-content: center; /* Centrer sur la carte */
+    gap: 8px; /* Espace entre icône et texte */
+}
+
+.pricing-card .payment-security i {
+    color: var(--color-primary-blue); /* Icône de cadenas/enveloppe en bleu */
+    font-size: 1.1em;
+}
+
+.pricing-card .payment-security strong {
+    color: var(--color-heading); /* Texte fort en couleur titre */
+}
+
+.pricing-card .payment-methods {
+    margin-top: 25px;
+}
+
+.pricing-card .payment-methods p {
+    font-size: 1em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.pricing-card .payment-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espace entre les logos */
+    flex-wrap: wrap; /* Permet aux logos de passer à la ligne si pas assez d'espace */
+    margin-bottom: 15px;
+}
+
+.pricing-card .payment-logos img {
+    max-height: 40px; /* Taille des logos de paiement */
+    width: auto;
+    filter: grayscale(10%); /* Léger désaturation pour un look pro */
+}
+
+.pricing-card .mobile-payments-note {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.limited-offer-text {
+    font-size: 1.15em;
+    color: var(--color-text-dark);
+    margin-top: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.limited-offer-text i {
+    color: var(--color-primary-orange);
+    font-size: 1.2em;
+}
+
+
+/* --- MEDIA QUERIES pour la section Prix --- */
+@media (max-width: 992px) {
+    .pricing-card {
+        padding: 35px;
+        max-width: 450px;
+    }
+    .pricing-card .card-header h3 {
+        font-size: 2em;
+    }
+    .pricing-card .price-value {
+        font-size: 3em;
+    }
+    .pricing-card .features-list li {
+        font-size: 1.05em;
+    }
+    .pricing-card .cta-button.main-cta {
+        padding: 18px 20px;
+    }
+    /* Ajustements pour les nouveaux éléments */
+    .pricing-card .payment-security {
+        font-size: 0.95em;
+    }
+    .pricing-card .payment-methods p {
+        font-size: 0.95em;
+    }
+    .pricing-card .payment-logos img {
+        max-height: 35px;
+    }
+    .pricing-card .mobile-payments-note {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 0;
+    }
+    .pricing-card {
+        padding: 30px;
+        max-width: 350px; /* Réduire un peu plus sur mobile */
+    }
+    .pricing-card .card-header h3 {
+        font-size: 1.8em;
+    }
+    .pricing-card .price-value {
+        font-size: 2.8em;
+    }
+    .pricing-card .features-list li {
+        font-size: 1em;
+    }
+    .pricing-card .cta-button.main-cta {
+        font-size: 1.1em;
+        padding: 16px 18px;
+    }
+    .limited-offer-text {
+        font-size: 1em;
+        margin-top: 40px;
+    }
+    /* Ajustements pour les nouveaux éléments */
+    .pricing-card .payment-security {
+        font-size: 0.9em;
+    }
+    .pricing-card .payment-methods p {
+        font-size: 0.9em;
+    }
+    .pricing-card .payment-logos img {
+        max-height: 30px;
+    }
+    .pricing-card .mobile-payments-note {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-card {
+        padding: 25px;
+    }
+    .pricing-card .card-header h3 {
+        font-size: 1.6em;
+    }
+    .pricing-card .price-value {
+        font-size: 2.5em;
+    }
+    .pricing-card .features-list li {
+        font-size: 0.95em;
+    }
+    .pricing-card .cta-button.main-cta {
+        font-size: 1em;
+        padding: 14px 15px;
+    }
+    .limited-offer-text {
+        font-size: 0.9em;
+    }
+    /* Ajustements pour les nouveaux éléments */
+    .pricing-card .payment-security {
+        font-size: 0.85em;
+    }
+    .pricing-card .payment-methods p {
+        font-size: 0.85em;
+    }
+    .pricing-card .payment-logos img {
+        max-height: 25px;
+    }
+    .pricing-card .mobile-payments-note {
+        font-size: 0.75em;
+    }
+}
+/* ========================================= */
+/* --- SECTION GARANTIE --- */
+/* ========================================= */
+.guarantee-section {
+    background-color: var(--color-background-primary); /* Fond gris clair */
+    padding: var(--padding-section);
+}
+
+.guarantee-section .icon-section {
+    color: var(--color-accent-green); /* Icône de la section en vert pour la confiance */
+}
+
+.guarantee-content-block {
+    background-color: var(--color-background-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.guarantee-content-block .guarantee-icon-large {
+    font-size: 4em;
+    color: var(--color-accent-green); /* Grande icône verte */
+    margin-bottom: 25px;
+}
+
+.guarantee-content-block h3 {
+    font-size: 2em;
+    color: var(--color-heading);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.guarantee-content-block p {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.guarantee-content-block p strong {
+    color: var(--color-primary-blue);
+    font-weight: 700;
+}
+
+.guarantee-content-block .guarantee-cta-text {
+    font-size: 1.2em;
+    color: var(--color-primary-orange); /* Texte clé en orange */
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* --- MEDIA QUERIES pour la section Garantie --- */
+@media (max-width: 992px) {
+    .guarantee-content-block {
+        padding: 35px;
+    }
+    .guarantee-content-block .guarantee-icon-large {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+    .guarantee-content-block h3 {
+        font-size: 1.8em;
+    }
+    .guarantee-content-block p {
+        font-size: 1.05em;
+    }
+    .guarantee-content-block .guarantee-cta-text {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .guarantee-section {
+        padding: 60px 0;
+    }
+    .guarantee-content-block {
+        margin-top: 40px;
+        padding: 30px;
+    }
+    .guarantee-content-block .guarantee-icon-large {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+    .guarantee-content-block h3 {
+        font-size: 1.6em;
+    }
+    .guarantee-content-block p {
+        font-size: 1em;
+    }
+    .guarantee-content-block .guarantee-cta-text {
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 480px) {
+    .guarantee-content-block {
+        padding: 25px;
+    }
+    .guarantee-content-block .guarantee-icon-large {
+        font-size: 2.5em;
+    }
+    .guarantee-content-block h3 {
+        font-size: 1.4em;
+    }
+    .guarantee-content-block p {
+        font-size: 0.95em;
+    }
+    .guarantee-content-block .guarantee-cta-text {
+        font-size: 1em;
+    }
+}
+/* ========================================= */
+/* --- FOOTER --- */
+/* ========================================= */
+footer {
+    background-color: var(--color-primary-blue); /* Fond bleu marine sombre */
+    color: var(--color-background-white); /* Texte blanc */
+    padding: 50px 0;
+    text-align: center;
+    border-top: 5px solid var(--color-primary-orange); /* Bordure orange en haut */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo img {
+    max-height: 60px; /* Taille du logo dans le footer */
+    filter: brightness(1.5); /* Pour aider un logo sombre à ressortir sur un fond foncé */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur mobile */
+    justify-content: center;
+    gap: 15px 30px; /* Espacement entre les liens */
+}
+
+.footer-links ul li a {
+    color: var(--color-background-white);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-primary-orange); /* Orange au survol */
+}
+
+.footer-info p {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: var(--color-text-light); /* Gris clair pour les infos secondaires */
+}
+
+.footer-info a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: var(--color-primary-orange);
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px; /* Espace après les infos */
+}
+
+.footer-social a {
+    color: var(--color-background-white);
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-primary-orange);
+    transform: translateY(-3px);
+}
+
+/* --- MEDIA QUERIES pour le Footer --- */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 0;
+    }
+    .footer-links ul {
+        flex-direction: column; /* Empile les liens sur mobile */
+        gap: 10px;
+    }
+    .footer-links ul li a {
+        font-size: 0.95em;
+    }
+    .footer-info p {
+        font-size: 0.85em;
+    }
+    .footer-social a {
+        font-size: 1.3em;
+    }
+}
+/* ========================================= */
+/* --- NOUVEAU FOOTER --- */
+/* ========================================= */
+footer {
+    background-color: var(--color-primary-blue); /* Fond bleu marine profond */
+    color: var(--color-background-white); /* Texte blanc */
+    padding: 70px 0 30px 0; /* Plus de padding en haut */
+    font-size: 0.95em;
+    line-height: 1.6;
+    border-top: 5px solid var(--color-primary-orange); /* Bordure orange en haut */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Espace entre les sections top et bottom */
+    text-align: center; /* Centrage par défaut */
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux colonnes de passer à la ligne */
+    justify-content: space-around; /* Espacement entre les colonnes */
+    align-items: flex-start; /* Alignement en haut des colonnes */
+    gap: 40px; /* Espace entre les colonnes sur desktop */
+    width: 100%; /* S'assure qu'il prend toute la largeur */
+}
+
+.footer-brand,
+.footer-nav,
+.footer-contact {
+    flex: 1; /* Permet aux éléments de prendre de l'espace */
+    min-width: 250px; /* Largeur minimale avant de passer à la ligne */
+    max-width: 300px; /* Largeur maximale pour éviter qu'ils soient trop larges */
+    text-align: center; /* Centrage du texte dans les colonnes */
+}
+
+.footer-brand img {
+    max-height: 70px; /* Logo plus grand */
+    margin-bottom: 20px;
+    filter: brightness(1.5);
+}
+
+.footer-brand .brand-slogan {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: var(--color-background-white);
+    font-weight: 300;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center; /* Centrer les icônes sociales */
+    gap: 20px;
+}
+
+.footer-social a {
+    color: var(--color-background-white);
+    font-size: 1.8em; /* Icônes plus grandes */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-primary-orange);
+    transform: translateY(-3px);
+}
+
+.footer-nav h4,
+.footer-contact h4 {
+    font-size: 1.3em;
+    color: var(--color-primary-orange); /* Titres de colonne en orange */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a,
+.footer-contact p,
+.footer-contact p a {
+    color: var(--color-background-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover,
+.footer-contact p a:hover {
+    color: var(--color-primary-orange);
+}
+
+.footer-contact p i {
+    margin-right: 8px;
+    color: var(--color-primary-orange); /* Icônes de contact en orange */
+}
+
+.footer-contact .small-text {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ligne de séparation subtile */
+    padding-top: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espace entre les éléments du bas */
+}
+
+.footer-legal p {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+.footer-legal a {
+    color: var(--color-background-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-primary-orange);
+}
+
+.footer-trust {
+    font-size: 0.9em;
+    color: var(--color-accent-green); /* Message de confiance en vert */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.footer-trust i {
+    color: var(--color-accent-green);
+    font-size: 1.1em;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.checkmark {
+  color: #2ecc71;
+  font-size: 1.2em;
+  margin-right: 8px;
+  line-height: 1.5;
+}
+
+.content {
+  flex: 1;
+  word-break: break-word;
+}
+footer {
+  background-color: #e6f0fa; /* bleu très doux */
+  padding: 60px 20px 40px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.container.footer-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-slogan {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 18px;
+  color: #ff914d; /* orange doux */
+  transition: transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #ff6500;
+}
+
+.footer-nav-area h4,
+.footer-info-area h4 {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.footer-links,
+.footer-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-info-list li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-info-list a {
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-info-list a:hover {
+  color: #ff914d;
+}
+
+.footer-info-list a[href^="mailto:"] {
+  font-weight: 500;
+  color: #222;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+}footer {
+  background: linear-gradient(to bottom, #e6f0fa 0%, #ffffff 100%);
+}
+.info-line {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  gap: 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-line i {
+  font-size: 18px;
+  color: #ff914d;
+  flex-shrink: 0;
+  transform: translateY(1px);
+}
+
+.info-line strong {
+  font-weight: 600;
+  color: #111;
+}
+
+/* Pour le bloc d'urgence */
+.info-line.warning {
+  background-color: #fff3e6;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #b14500;
+  font-size: 15.5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.cta-button, .main-cta {
+  background: linear-gradient(135deg, #ff914d, #ff7300);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 rgba(255, 115, 0, 0);
+  position: relative;
+}
+
+.cta-button:hover,
+.main-cta:hover {
+  box-shadow: 0 0 20px rgba(255, 115, 0, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.cta-button:active,
+.main-cta:active {
+  transform: scale(0.95);
+}
+a[class*="cta"] {
+  transition: all 0.3s ease;
+}
+.cta-button {
+    display: inline-block;
+    padding: 18px 35px;
+    background-color: var(--color-primary-orange); /* Orange vif comme couleur principale des CTA */
+    color: var(--color-background-white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-medium);
+}
+
+.cta-button:hover {
+    background-color: #E07B00; /* Un orange légèrement plus foncé au survol */
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+
+
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script> <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NZDBJMMCWT'); // REMPLACEZ PAR VOTRE VRAI ID GA4
+    </script> 
+     <header class="main-header">
+    <div class="container">
+        <div class="logo">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68386fd19b03e_1002081208.jpg" alt="TargetMax Logo">
+        </div>
+        </div>
+</header>
+
+<section class="initial-preview-section" id="initial-preview-section">
+    <div class="container">
+        <div class="preview-content">
+            </div>
+        <div class="mockup-display">
+            <img src="//d1yei2z3i6k35z.cloudfront.net/11365804/68386fba941a9_1002082192.png" alt="Aperçu du Guide TargetMax" class="product-mockup">
+        </div>
+    </div>
+</section>
+
+</div>
+<header class="hero-section">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>
+                30 Idées d'Activités Éducatives à Faire avec Ton Enfant <br> Sans Écran ni Téléphone
+            </h1>
+
+            <p class="subtitle">
+                Crée des moments de complicité, d'apprentissage et de joie, loin des distractions numériques.
+            </p>
+
+            <p class="intro-paragraph">
+                Tu rêves de moments de qualité avec tes enfants, mais les idées manquent ? Ce guide est la solution idéale pour transformer le quotidien en aventures ludiques et éducatives, sans effort et sans matériel coûteux.
+            </p>
+            
+            <a href="#pack-complet" class="cta-button main-cta">
+                Je Découvre Le Guide Maintenant
+            </a>
+
+            <p class="cta-subtext" data-aos="fade-up" data-aos-delay="500">
+                Clique pour accéder à un trésor d'activités simples, amusantes et épanouissantes pour toute la famille.
+            </p>
+        </div>
+
+</header>
+
+    <section class="problem-section" id="problem-section">
+    <div class="container">
+        <i class="fas fa-exclamation-triangle icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Ces Scénarios Te Parlent ? Le Défi des Parents Modernes
+        </h2>
+
+        <p class="intro-problem-text" data-aos="fade-up" data-aos-delay="200">
+            Tu aimes tes enfants plus que tout, mais parfois, la réalité du quotidien peut être pesante.
+            As-tu déjà ressenti l'un de ces défis ?
+        </p>
+
+        <div class="problem-scenarios-grid">
+            <div class="scenario-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="scenario-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>L'Écran, ce Voleur de Moments</h3>
+                <p>Ton enfant est captivé par le téléphone ou la tablette, et tu as l'impression de perdre cette connexion précieuse.</p>
+            </div>
+
+            <div class="scenario-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="scenario-icon"><i class="fas fas fa-question-circle""></i></div>
+                <h3>La Panne Sèche d'Idées</h3>
+                <p>Tu veux proposer des activités stimulantes, mais le manque de temps ou d'inspiration te paralyse.</p>
+            </div>
+
+            <div class="scenario-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="scenario-icon"><i class="fas fa-wallet"></i></div>
+                <h3>Le Coût des Loisirs</h3>
+                <p>Tu penses que les activités éducatives sont synonymes de dépenses importantes, ce qui te freine.</p>
+            </div>
+
+            <div class="scenario-item" data-aos="fade-up" data-aos-delay="600">
+                <div class="scenario-icon"><i class="fas fa-clock"></i></div>
+                <h3>Le Manque de Temps et d'Énergie</h3>
+                <p>Après une longue journée, l'idée de chercher et préparer des activités te semble être une montagne.</p>
+            </div>
+        </div>
+
+        <p class="call-to-action-problem" data-aos="fade-up" data-aos-delay="700">
+            Si l'un de ces points te parle, sache que tu n'es pas seul(e). Et si tu pouvais transformer ces défis en moments de pur bonheur ?
+        </p>
+    </div>
+</section>
+     <section class="solution-section" id="solution-section">
+    <div class="container">
+        <i class="fas fa-lightbulb icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            La Solution TargetMax : Des Idées Simples pour des Moments Inoubliables
+        </h2>
+
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Découvre comment transformer le quotidien en aventures enrichissantes. Le "Guide TargetMax : 30 Idées d'Activités Éducatives Sans Écran" est ton allié pour des journées remplies de créativité et de complicité.
+        </p>
+
+        <div class="solution-grid">
+            <div class="solution-item" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="fas fa-check-circle"></i> 30 Idées Prêtes à l'Emploi</h3>
+                <p>Ouvre une page, lance une activité ! Zéro prise de tête, tout est conçu pour être facile et immédiat, sans préparation complexe.</p>
+            </div>
+
+            <div class="solution-item" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="fas fa-check-circle"></i> Pour Tous les Âges (3-12 ans)</h3>
+                <p>Que tu sois parent, grand-parent, ou éducateur, ce guide s'adapte à l'âge de ton enfant, offrant des activités variées pour stimuler son développement.</p>
+            </div>
+
+            <div class="solution-item" data-aos="fade-up" data-aos-delay="500">
+                <h3><i class="fas fa-check-circle"></i> Renforce la Complicité Familiale</h3>
+                <p>Chaque activité est une invitation à rire, partager et créer des souvenirs ensemble. Plus de lien, moins d'écrans !</p>
+            </div>
+
+            <div class="solution-item" data-aos="fade-up" data-aos-delay="600">
+                <h3><i class="fas fa-check-circle"></i> Développement Complet de l'Enfant</h3>
+                <p>Motricité, imagination, émotions, autonomie... ton enfant apprend et grandit de façon ludique, sans même s'en rendre compte.</p>
+            </div>
+
+            <div class="solution-item" data-aos="fade-up" data-aos-delay="700">
+                <h3><i class="fas fa-check-circle"></i> Matériel Simple ou Existants</h3>
+                <p>Pas besoin de dépenser une fortune ! Utilise ce que tu as déjà à la maison ou des éléments faciles à trouver.</p>
+            </div>
+
+            <div class="solution-item" data-aos="fade-up" data-aos-delay="800">
+                <h3><i class="fas fa-check-circle"></i> L'Esprit Tranquille, Loin des Écrans</h3>
+                <p>Offre à ton enfant une alternative saine et engageante aux écrans, et profite de moments de qualité en toute sérénité.</p>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="900" style="margin-top: 40px;">
+            <a href="#pack-complet" class="cta-button main-cta">
+                Je Veux Ces 30 Idées pour Mon Enfant !
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="content-section" id="content-section">
+    <div class="container">
+        <i class="fas fa-book-open icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Un Trésor d'Idées : 30 Activités Réparties en 6 Thèmes Clés
+        </h2>
+
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Le guide TargetMax n'est pas juste une liste d'activités. C'est une exploration structurée de 6 thèmes essentiels pour l'épanouissement de ton enfant. Découvre la richesse de ce que tu vas pouvoir proposer :
+        </p>
+
+        <div class="themes-grid">
+            <div class="theme-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="theme-icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>Créativité et Expression</h3>
+                <p>Des idées pour développer l'imagination, l'expression artistique et le sens esthétique de ton enfant.</p>
+            </div>
+
+            <div class="theme-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="theme-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h3>Jeux et Apprentissage</h3>
+                <p>Des activités ludiques pour stimuler la logique, la résolution de problèmes et l'acquisition de nouvelles connaissances.</p>
+            </div>
+
+            <div class="theme-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="theme-icon"><i class="fas fa-running"></i></div>
+                <h3>Mouvement et Motricité</h3>
+                <p>Des idées pour bouger, se dépenser, développer la coordination et la conscience corporelle.</p>
+            </div>
+
+            <div class="theme-item" data-aos="fade-up" data-aos-delay="600">
+                <div class="theme-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3>Coopération et Émotions</h3>
+                <p>Des activités pour apprendre à jouer ensemble, à partager, à exprimer et gérer ses émotions.</p>
+            </div>
+
+            <div class="theme-item" data-aos="fade-up" data-aos-delay="700">
+                <div class="theme-icon"><i class="fas fa-globe-americas"></i></div>
+                <h3>Découverte du Monde</h3>
+                <p>Des idées pour explorer la nature, la science, les cultures et élargir les horizons de ton enfant.</p>
+            </div>
+
+            <div class="theme-item" data-aos="fade-up" data-aos-delay="800">
+                <div class="theme-icon"><i class="fas fa-laugh-beam"></i></div>
+                <h3>Rire et Détente</h3>
+                <p>Des moments de pur plaisir et de légèreté pour renforcer les liens familiaux.</p>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="900" style="margin-top: 50px;">
+            <a href="#pack-complet" class="cta-button main-cta">
+                Je Découvre Ces 30 Idées Réparties en 6 Thèmes !
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="aisha-story-section">
+    <div class="container">
+        <div class="icon-section" data-aos="fade-up"><i class="fas fa-hourglass-half"></i></div>
+        <h2 data-aos="fade-up" data-aos-delay="200">
+            L'Histoire d'Aïsha : <br>Le Temps Perdu qui Ne Reviendra Pas
+        </h2>
+
+        <div class="aisha-story-block" data-aos="fade-up" data-aos-delay="400">
+            <p>
+                <strong>Aïsha, une maman dévouée de deux enfants, se sentait dépassée </strong>. Chaque jour, c'était le même refrain : après l'école, les devoirs, puis les écrans. Elle savait que ses enfants méritaient mieux, des activités qui stimuleraient leur créativité, leur curiosité, et leur développement. Mais entre son travail à plein temps et les tâches ménagères, l'idée de trouver et d'organiser des activités stimulantes était une montagne infranchissable.
+            </p>
+            <p>
+                        <strong>Elle voyait le temps filer, ces précieuses années d'enfance s'échapper</strong>, remplies de moments passés devant des dessins animés plutôt qu'à construire des châteaux, à peindre, ou à explorer la nature . Le regret commençait à s'installer, la sensation d'avoir manqué des opportunités d'apprentissage et de connexion avec ses enfants.
+            </p>
+            <p>
+                      <strong>  Un jour, une amie lui a parlé du Guide TargetMax        </strong>. Au début, elle était sceptique. "Encore un énième guide", pensait-elle. Mais la promesse de 30 idées clés en main, sans préparation fastidieuse, l'a intriguée. Elle a décidé de tenter.
+            </p>
+            <p>
+                        <strong>Dès le premier après-midi, tout a changé        </strong>. Ses enfants ont découvert une activité créative simple mais captivante. Les rires ont remplacé le silence de l'écran. Aïsha a ressenti un soulagement immense, une joie profonde. Le guide lui a non seulement donné des idées, mais lui a aussi redonné le courage et la confiance pour créer des moments magiques.
+            </p>
+            <p>
+                        <strong>Aujourd'hui, les écrans sont devenus une option, pas une nécessité</strong>. Les après-midis sont remplis d'aventures, de découvertes, et de moments qui renforcent leurs liens. Aïsha se dit souvent : "Si seulement j'avais eu TargetMax plus tôt... Tant de temps perdu." Mais elle est reconnaissante d'avoir finalement trouvé la solution.
+            </p>
+        </div>
+
+        <p class="story-lesson-text" data-aos="fade-up" data-aos-delay="600">
+            Ne laissez pas le temps précieux avec vos enfants s'envoler. Chaque instant est une opportunité de construire des souvenirs et de semer les graines de leur développement. Le temps perdu ne se rattrape pas.
+        </p>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="700" style="margin-top: 50px;">
+            <a href="#pack-complet" class="cta-button">
+                Ne Perdez Plus Une Seule Minute, Agissez Maintenant !
+            </a>
+            <p style="font-size: 14px; color: var(--color-text-light); margin-top: 15px;">
+                *L'histoire d'Aïsha est une illustration basée sur des retours de parents, visant à refléter des situations courantes.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <i class="fas fa-hand-holding-heart icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Ils Témoignent : Des Parents Heureux, des Enfants Épanouis !
+        </h2>
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Découvrez les retours de parents comme vous qui ont transformé leur quotidien et libéré le potentiel de leurs enfants grâce au Guide TargetMax. Leurs mots sont notre plus belle récompense.
+        </p>
+        <div class="testimonials-grid">
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-quote-left"></i>
+                <p>"Fini le stress des après-midis vides ! Le guide est <strong>MA</strong> référence. C'est simple, ludique, et chaque activité est un succès. Indispensable pour notre famille !"</p>
+                <p class="author">- Sophie L., Maman de 2 enfants</p>
+            </div>
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-quote-left"></i>
+                <p>"J'ai enfin trouvé des <strong>alternatives aux écrans</strong> qui captivent vraiment mes enfants. Les activités sont intelligentes, et voir leur créativité s'épanouir est formidable. Une ressource <strong>très précieuse</strong>."</p>
+                <p class="author">- Marc D., Papa de 3 enfants</p>
+            </div>
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-quote-left"></i>
+                <p>"Je cherchais désespérément des idées d'activités éducatives mais faciles à mettre en place. TargetMax a dépassé mes attentes. J'ai maintenant des moments de qualité garantis, c'est <strong>inestimable !</strong>"</p>
+                <p class="author">- Léa K., Maman d'un enfant unique</p>
+            </div>
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="600">
+                <i class="fas fa-quote-left"></i>
+                <p>"Bonjour TargetMax ! Merci infiniment pour ce guide qui vient me donner une <strong>vue claire</strong> sur la manière d'occuper mes enfants de façon enrichissante. Il m'est d'une grande utilité et je suis ravie de l'avoir acquis."</p>
+                <p class="author">- Caroline S., Maman de jumeaux</p>
+            </div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="700" style="margin-top: 40px;">
+            <a href="#pack-complet" class="cta-button">
+                Je Rejoins Ces Parents Épanouis !
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="pack-complete-section" id="pack-complet">
+    <div class="container">
+        <i class="fas fa-box-open icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Le Pack Complet TargetMax : Libérez le Potentiel de Votre Enfant !
+        </h2>
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Ce que vous allez recevoir pour transformer votre quotidien et offrir à votre enfant un environnement d'apprentissage stimulant :
+        </p>
+ </div>
+        <div class="pack-content-grid">
+            <div class="main-guide-block" data-aos="fade-right" data-aos-delay="300">
+                <div class="guide-image">
+                    <img src="//d1yei2z3i6k35z.cloudfront.net/11365804/68386fba941a9_1002082192.png" alt="Mockup du Guide Principal TargetMax">
+                </div>
+                <div class="guide-description">
+                    <h3><i class="fas fa-book"></i> Le Guide Principal TargetMax : 30 Idées Clés en Main !</h3>
+                    <ul>
+  <li>
+    <span class="checkmark">✔</span>
+    <span class="content"><strong>30 activités ludiques et éducatives</strong>, classées par thèmes (créativité, sciences, etc.)</span>
+  </li>
+  <li>
+    <span class="checkmark">✔</span>
+    <span class="content"><strong>Instructions simples et pas-à-pas</strong> pour chaque activité</span>
+  </li>
+  <li>
+    <span class="checkmark">✔</span>
+    <span class="content"><strong>Liste des matériaux nécessaires</strong> pour une préparation rapide</span>
+  </li>
+</ul>
+
+            <div class="bonus-section">
+                <h3 data-aos="fade-up" data-aos-delay="400"><i class="fas fa-gift"></i> Et Ce N'est Pas Tout ! Accédez à des Bonus Exclusifs :</h3>
+                <div class="bonus-grid">
+                    <div class="bonus-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="bonus-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Bonus #1 : Planificateur d'Activités Hebdomadaire</h4>
+                        <p>Organisez facilement les activités de la semaine pour ne plus jamais manquer d'inspiration et optimiser votre temps.</p>
+                    </div>
+                    <div class="bonus-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="bonus-icon"><i class="fas fa-school"></i></div>
+                        <h4>Bonus #2 : Accès à la Communauté Privée "Parents TargetMax"</h4>
+                        <p>Échangez conseils, idées et expériences avec d'autres parents motivés dans un groupe Facebook exclusif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="800" style="margin-top: 60px;">
+            <a href="#pricing" class="cta-button main-cta">
+                Oui, Je Veux le Pack Complet TargetMax !
+            </a>
+            <p class="cta-subtext" style="font-size: 1em; margin-top: 15px; color: var(--color-text-dark);">
+                Découvrez le prix exceptionnel juste en dessous.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="faq-section" id="faq">
+    <div class="container">
+        <i class="fas fa-question-circle icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Vos Questions, Nos Réponses : Tout sur le Guide TargetMax
+        </h2>
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Nous avons compilé les questions les plus fréquemment posées par les parents. Si vous ne trouvez pas votre réponse ici, n'hésitez pas à nous contacter !
+        </p>
+
+        <div class="faq-accordion-container">
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <input type="checkbox" id="faq1" class="accordion-toggle">
+                <label for="faq1" class="accordion-header">
+                    Le Guide TargetMax est-il adapté à tous les âges d'enfants ?
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </label>
+                <div class="accordion-content">
+                    <p>Oui, le Guide TargetMax propose des activités variées qui peuvent être adaptées pour les enfants de 3 à 12 ans. Chaque activité inclut des conseils pour ajuster la complexité et le matériel en fonction de l'âge et des capacités de votre enfant.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <input type="checkbox" id="faq2" class="accordion-toggle">
+                <label for="faq2" class="accordion-header">
+                    Quel type d'activités propose le guide ? Ai-je besoin de matériel spécial ?
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </label>
+                <div class="accordion-content">
+                    <p>Le guide couvre un large éventail d'activités : créatives, scientifiques, de motricité fine, sensorielles, etc. La plupart des activités sont conçues pour être réalisées avec du matériel du quotidien ou facilement accessible, afin de simplifier la mise en place pour les parents occupés.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <input type="checkbox" id="faq3" class="accordion-toggle">
+                <label for="faq3" class="accordion-header">
+                    Le guide est-il un livre physique ou un produit numérique ?
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </label>
+                <div class="accordion-content">
+                    <p>Le Guide TargetMax est un produit entièrement numérique (PDF) que vous pouvez télécharger immédiatement après votre achat. Cela vous permet d'y accéder sur n'importe quel appareil (ordinateur, tablette, smartphone) et de l'imprimer si vous le souhaitez.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <input type="checkbox" id="faq4" class="accordion-toggle">
+                <label for="faq4" class="accordion-header">
+                    Comment puis-je être sûr(e) que ce guide fonctionnera pour ma famille ?
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </label>
+                <div class="accordion-content">
+                    <p>Nous sommes convaincus de la qualité et de l'efficacité du Guide TargetMax. C'est pourquoi votre achat est protégé par une **Garantie Satisfaction de 30 Jours**. Si vous n'êtes pas entièrement satisfait, nous vous remboursons intégralement, sans poser de questions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                <input type="checkbox" id="faq5" class="accordion-toggle">
+                <label for="faq5" class="accordion-header">
+                    Comment se déroule l'accès au bonus "Communauté Privée Parents TargetMax" ?
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </label>
+                <div class="accordion-content">
+                    <p>Dès votre achat finalisé, vous recevrez un email avec toutes les instructions pour télécharger votre guide et accéder à la communauté privée. Un lien direct vers le groupe Facebook exclusif vous sera fourni pour que vous puissiez rejoindre d'autres parents motivés.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="800" style="margin-top: 50px;">
+            <p style="font-size: 1.1em; color: var(--color-text-dark); margin-bottom: 20px;">
+                Prêt(e) à dire adieu à l'ennui et bonjour à l'épanouissement ?
+            </p>
+            <a href="#pricing" class="cta-button">
+                Oui, je veux transformer le quotidien de mes enfants !
+            </a>
+        </div>
+    </div>
+</section>
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <i class="fas fa-tags icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Obtenez le Guide TargetMax Complet dès Aujourd'hui !
+        </h2>
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Investissez dans le développement et l'épanouissement de vos enfants avec le Guide TargetMax, le seul outil dont vous aurez besoin pour des journées riches en découvertes.
+        </p>
+
+        <div class="pricing-card-container" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3>Accès Immédiat au Pack Complet</h3>
+                    <p class="subtitle-card">Guide + Tous les Bonus</p>
+                </div>
+                <div class="card-body">
+                    <div class="price-display">
+                        <span class="old-price">Valeur réelle : 12000f</span>
+                        <span class="current-price">Seulement <span class="price-value">5000f</span></span>
+                        <p class="savings">Économisez 7000f !</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Le Guide Principal TargetMax (PDF)</li>
+                        <li><i class="fas fa-check-circle"></i> Bonus #1 : Accès Communauté Privée</li>
+                        <li><i class="fas fa-check-circle"></i> Bonus #2 : Check-list d'Activités Prêtes à l'Emploi</li>   
+                        <li><i class="fas fa-check-circle"></i> Accès à vie et support client</li>
+                    </ul>
+                    <a href="https://zcabewjl.mychariow.com/prd_a0ka9i/checkout" class="cta-button main-cta">
+                        Je Télécharge Mon Pack Complet Maintenant !
+                    </a>
+                </div>
+                <div class="card-footer">
+                    <p>
+                        Votre achat est couvert par notre
+                        <strong><a href="#guarantee" style="color: inherit; text-decoration: underline;">Garantie Satisfaction 30 Jours</a></strong>.
+                    </p>
+<div class="info-line">
+  <i class="fas fa-lock"></i>
+  <span>Paiement <strong>100% sécurisé</strong>.</span>
+</div>
+
+<div class="info-line">
+  <i class="fas fa-envelope-open-text"></i>
+  <span>Accès <strong>immédiat par e-mail</strong> après confirmation.</span>
+</div>
+                    <div class="payment-methods">
+                        <p>Options de Paiement Flexibles :</p>
+                        <div class="payment-logos">
+                            <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68059bbc8cb8d_1001949896.png" alt="Logo Wave">
+                            <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68059ba7ca78b_1001949897.png" alt="Logo MoMo">
+                            <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68059cc09c673_1001949901.webp" alt="Logo Orange Money">
+                            </div>
+                        <p class="mobile-payments-note">Paiement Mobile (Wave, MoMo, Orange...) et Carte Bancaire disponibles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="info-line warning" data-aos="fade-up" data-aos-delay="400">
+  <i class="fas fa-hourglass-half"></i>
+  <span>Cette offre est <strong>limitée</strong> et peut être retirée à tout moment. Agissez maintenant !</span>
+</div>
+    </div>
+</section>
+<section class="guarantee-section" id="guarantee">
+    <div class="container">
+        <i class="fas fa-handshake icon-section" data-aos="fade-up"></i>
+        <h2 data-aos="fade-up" data-aos-delay="100">
+            Notre Engagement : Votre Satisfaction Garantie 30 Jours
+        </h2>
+        <p class="section-intro" data-aos="fade-up" data-aos-delay="200">
+            Chez TargetMax, nous sommes tellement convaincus de la valeur et de l'impact positif du Guide sur le quotidien de votre famille que nous vous offrons une tranquillité d'esprit totale.
+        </p>
+
+        <div class="guarantee-content-block" data-aos="fade-up" data-aos-delay="300">
+            <div class="guarantee-icon-large">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Qualité et Clarté Garanties !</h3>
+            <p>
+                Nous avons conçu le Guide TargetMax avec le plus grand soin, en nous basant sur les principes de l'éducation positive et de l'éveil par le jeu. Toutes les informations sont claires, pratiques et directement applicables.
+            </p>
+            <p>
+                C'est pourquoi votre achat est protégé par une <strong>Garantie Satisfaction 30 Jours</strong>.
+            </p>
+            <p class="guarantee-cta-text">
+                Accédez au guide pendant 30 jours complets. Plongez dans les modules, découvrez les activités, et voyez par vous-même la transformation dans la vie de vos enfants.
+            </p>
+            <p>
+                Si, pour quelque raison que ce soit, vous n'êtes pas entièrement satisfait(e) de votre achat, contactez-nous simplement dans les 30 jours suivant votre commande. Nous vous rembourserons <strong>intégralement</strong>, sans poser de questions. C'est notre promesse !
+            </p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400" style="margin-top: 60px;">
+            <p style="font-size: 1.15em; color: var(--color-text-dark); margin-bottom: 25px; font-weight: 600;">
+                Plus rien ne vous retient : offrez le meilleur à vos enfants !
+            </p>
+            <a href="#cta-final" class="cta-button">
+                Je Profite de l'Offre Sans Risque !
+            </a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container footer-grid-layout">
+        
+        <div class="footer-brand-area" data-aos="fade-up" data-aos-delay="100">
+            <div class="footer-logo">
+                <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/68386fd19b03e_1002081208.jpg" alt="Logo TargetMax">
+            </div>
+            <p class="footer-slogan">Cultiver le lien, loin des écrans. Chaque instant compte.</p>
+            <div class="footer-social">
+                <a href="#" target="_blank" aria-label="Facebook TargetMax"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram TargetMax"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-nav-area" data-aos="fade-up" data-aos-delay="200">
+            <h4>Explorer</h4>
+            <ul class="footer-links">
+                <li><a href="#initial-preview-section">Accueil</a></li> 
+                <li><a href="#problem-section">Le Problème</a></li>
+                <li><a href="#solution-section">La Solution</a></li>
+                <li><a href="#content-section">Le Contenu</a></li>
+                <li><a href="#pack-complet">Le Pack Complet</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-info-area" data-aos="fade-up" data-aos-delay="300">
+            <h4>Contact & Info</h4>
+            <ul class="footer-info-list">
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#pricing">Prix</a></li>
+                <li><a href="#guarantee">Garantie</a></li>
+                <li><a href="mailto:contact@targetmax.com">contact@targetmax.com</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+                <li><a href="#">Politique de Confidentialité</a></li>
+            </ul>
+            <p class="footer-copyright">&copy; 2025 TargetMax. Tous droits réservés.</p>
+        </div>
+
+    </div>
+</footer>
+<script>
+    // Initialisation de l'année (peut rester séparé pour la clarté)
+    document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Initialisation d'AOS
+    AOS.init({
+        duration: 800, // Durée animation
+        once: true     // Animation une seule fois
+    });
+</script>
+
+<script>
+    // Smooth scrolling pour les liens ancres (ex: #pricing)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            try {
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.warn('Smooth scroll target not found for href:', this.getAttribute('href'));
+                }
+            } catch (error) {
+                console.error('Error during smooth scroll:', error);
+            }
+        });
+    });
+</script>
+
+<script>
+    // --- Scripts de Suivi Google Analytics (GA4) ---
+    if (typeof gtag === 'function') {
+
+        // --- 1. Suivi du défilement (Scroll Depth) AVEC sessionStorage ---
+        const scrollThresholds = [20, 40, 60, 80, 100]; // Paliers de défilement à suivre
+        window.addEventListener('scroll', () => {
+            const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollableHeight <= 0) return; // Empêche les divisions par zéro si la page est trop courte
+            const scrolled = window.scrollY;
+            const scrollPercentage = Math.round((scrolled / scrollableHeight) * 100);
+
+            scrollThresholds.forEach(threshold => {
+                const flagName = `scroll_depth_${threshold}_sent`;
+                if (scrollPercentage >= threshold && !sessionStorage.getItem(flagName)) {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'Engagement',
+                        'event_label': `${threshold}%`
+                    });
+                    try {
+                        sessionStorage.setItem(flagName, 'true');
+                    } catch (e) { console.error('Error setting sessionStorage for scroll depth:', e); }
+                }
+            });
+        }, { passive: true });
+
+        // --- 2. Suivi de la visibilité des sections clés AVEC sessionStorage ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 }; // Déclenche à 50% de visibilité
+            const sectionsToTrack = [ // Assurez-vous que ces ID existent sur vos sections HTML
+                'problem-section', 'solution-section', 'content-section', 'mamadou-story-section',
+                'testimonials-section', 'about-author-section', 'faq-section', 'what-you-get-section',
+                'bonuses-section', 'pricing', 'guarantee-section', 'whatsapp-contact-section'
+            ];
+
+            sectionsToTrack.forEach(sectionId => {
+                const sectionElement = document.getElementById(sectionId);
+                if (sectionElement) {
+                    const observer = new IntersectionObserver((entries, observerInstance) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const flagName = `viewed_${sectionId}_sent`;
+                                if (!sessionStorage.getItem(flagName)) {
+                                    gtag('event', 'section_view', {
+                                        'event_category': 'Engagement',
+                                        'event_label': 'Viewed: ' + sectionId
+                                    });
+                                    try {
+                                        sessionStorage.setItem(flagName, 'true');
+                                    } catch (e) { console.error(`Error setting sessionStorage for section view ${sectionId}:`, e); }
+                                    observerInstance.unobserve(entry.target); // Arrêter d'observer après la première vue
+                                } else {
+                                    observerInstance.unobserve(entry.target);
+                                }
+                            }
+                        });
+                    }, observerOptions);
+                    observer.observe(sectionElement);
+                } else {
+                    console.warn('Section Tracking: ID "' + sectionId + '" not found.');
+                }
+            });
+
+            // --- 3. Suivi des clics : Géré de manière à ne PAS interférer avec les animations CSS des boutons CTA ---
+            document.body.addEventListener('click', function(e) {
+                let eventLabel = '';
+                let eventName = '';
+                let eventValue = '';
+                let eventCategory = ''; // Catégorie par défaut, sera souvent "Engagement" ou "Navigation"
+
+                // **Gestion des clics sur les boutons CTA (IMPORTANT : Ciblez par ID ou classe de suivi)**
+                // Si votre CTA principal a l'ID 'mainCtaButtonId' et les autres CTA à suivre ont la classe 'track-cta-click'.
+                // ASSUREZ-VOUS d'ajouter ces IDs/classes dans votre HTML :
+                // ex: <a id="mainCtaButtonId" class="cta-button main-cta" href="...">...</a>
+                // ex: <a class="cta-button track-cta-click" href="...">...</a>
+                if (e.target.matches('#mainCtaButtonId') || e.target.classList.contains('track-cta-click')) {
+                     eventLabel = e.target.textContent.trim();
+                     eventValue = e.target.href;
+                     eventCategory = 'Engagement';
+
+                     // Déterminez le nom de l'événement plus spécifiquement
+                     const isMainCta = e.target.classList.contains('main-cta');
+                     const isCheckoutLink = e.target.href && e.target.href.includes('mychariow.com');
+
+                      if (isMainCta && isCheckoutLink) {
+                          eventName = 'clic_acheter_principal';
+                      } else if (isMainCta) {
+                           eventName = 'clic_cta_principal_ancre';
+                      } else if (isCheckoutLink) { // Autres CTA qui mènent au checkout
+                          eventName = 'clic_acheter_secondaire';
+                      } else { // Autres CTA qui mènent à une ancre
+                          eventName = 'clic_cta_secondaire_ancre';
+                      }
+                     gtag('event', eventName, { 'event_category': eventCategory, 'event_label': eventLabel, 'value': eventValue });
+                }
+                // Clic sur le bouton WhatsApp
+                else if (e.target.closest('a.whatsapp-button')) {
+                    const whatsAppButton = e.target.closest('a.whatsapp-button');
+                    gtag('event', 'clic_whatsapp_support', {
+                        'event_category': 'Contact',
+                        'event_label': whatsAppButton.textContent.trim(),
+                        'value': whatsAppButton.href
+                    });
+                }
+                // Clic sur les liens du Footer (excluant les liens vides '#')
+                else if (e.target.matches('footer a') && e.target.getAttribute('href') && e.target.getAttribute('href') !== '#') {
+                    gtag('event', 'clic_lien_footer', {
+                        'event_category': 'Navigation',
+                        'event_label': 'Footer Link: ' + e.target.textContent.trim(),
+                        'value': e.target.href
+                    });
+                }
+                // Suivi des clics sur les items FAQ
+                else if (e.target.closest('.faq-item')) {
+                    const faqItem = e.target.closest('.faq-item');
+                    const questionText = faqItem.querySelector('.question')?.textContent.trim() || 'Question FAQ inconnue';
+                    gtag('event', 'interaction_faq', {
+                        'event_category': 'Engagement',
+                        'event_label': 'FAQ Click: ' + questionText
+                    });
+                }
+                // Suivi des clics sur les méthodes de paiement
+                else if (e.target.closest('.payment-methods')) {
+                    let clickedElement = e.target;
+                    let paymentMethodLabel = 'Méthode inconnue';
+
+                    if (clickedElement.tagName === 'IMG' && clickedElement.closest('.payment-methods')) {
+                        paymentMethodLabel = 'Logo: ' + (clickedElement.alt || 'Logo sans alt');
+                    } else if (clickedElement.classList.contains('mobile-payments-note') && clickedElement.closest('.payment-methods')) {
+                        paymentMethodLabel = 'Texte Note: ' + clickedElement.textContent.trim();
+                    } else if (clickedElement.closest('.payment-methods')) {
+                        paymentMethodLabel = 'Zone Méthodes Cliquée';
+                    }
+
+                    if (paymentMethodLabel !== 'Méthode inconnue') {
+                        gtag('event', 'clic_methode_paiement', {
+                            'event_category': 'Engagement',
+                            'event_label': paymentMethodLabel
+                        });
+                    }
+                }
+                // Suivi des clics sur les éléments de liste (Modules, Pack, Bonus)
+                else if (e.target.closest('.modules-list li')) {
+                    const listItem = e.target.closest('.modules-list li');
+                    const itemText = listItem.textContent.trim().substring(0, 100);
+                    gtag('event', 'clic_detail_offre', {
+                        'event_category': 'Engagement - Liste Modules',
+                        'event_label': 'Module: ' + itemText
+                    });
+                }
+                else if (e.target.closest('.what-you-get-section .get-list li')) {
+                    const listItem = e.target.closest('.what-you-get-section .get-list li');
+                    const itemText = listItem.textContent.trim().substring(0, 100);
+                    gtag('event', 'clic_detail_offre', {
+                        'event_category': 'Engagement - Liste Pack',
+                        'event_label': 'Pack Item: ' + itemText
+                    });
+                }
+                else if (e.target.closest('.bonus-item')) {
+                    const listItem = e.target.closest('.bonus-item');
+                    const itemText = listItem.querySelector('h3')?.textContent.trim() || listItem.textContent.trim().substring(0, 100);
+                    gtag('event', 'clic_detail_offre', {
+                        'event_category': 'Engagement - Liste Bonus',
+                        'event_label': 'Bonus Item: ' + itemText
+                    });
+                }
+                // Suivi des clics sur les liens d'ancre internes (hors CTA/Footer) - Premier cas
+                else if (e.target.matches('a[href^="#"]:not(.cta-button):not(footer a)')) {
+                    const anchorLink = e.target;
+                    gtag('event', 'clic_navigation_interne', {
+                        'event_category': 'Navigation',
+                        'event_label': 'Ancre: ' + anchorLink.getAttribute('href'),
+                        'value': anchorLink.textContent.trim().substring(0, 50)
+                    });
+                }
+                // Suivi des clics sur les liens d'ancre internes (hors CTA/Footer) - Deuxième cas (était en double, mais conservé pour refléter votre script)
+                // C'est un doublon de la condition précédente, vous pouvez probablement la supprimer si elle est identique.
+                else if (e.target.matches('a[href^="#"]:not(.cta-button):not(footer a)')) {
+                    const anchorLink = e.target;
+                    gtag('event', 'clic_navigation_interne', {
+                        'event_category': 'Navigation',
+                        'event_label': 'Ancre: ' + anchorLink.getAttribute('href'),
+                        'value': anchorLink.textContent.trim().substring(0, 50)
+                    });
+                }
+                // Suivi du clic sur le lien email de contact
+                else if (e.target.matches('.email-contact-section .email-address a')) {
+                    gtag('event', 'clic_email_contact', {
+                        'event_category': 'Contact',
+                        'event_label': 'Email Link',
+                        'value': e.target.href
+                    });
+                }
+            }); // Fin de document.body.addEventListener('click')
+        }); // Fin de DOMContentLoaded pour Observer et Clicks
+    } else {
+        console.error('GA4 gtag function not found. Ensure GA4 is loaded correctly in <head>.');
+    }
+</script>
+    </body>
+</html>
